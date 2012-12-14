@@ -1,0 +1,89 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+\usepackage{moderntimeline}
+\usepackage[french]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+\renewcommand{\FrenchLabelItem}{\textcolor{blue}{$\circ$}}
+
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\tlmaxdates{2009}{2013}
+\tlwidth{0.8ex}
+\tltext{\tiny}
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+\setlength{\hintscolumnwidth}{2.5cm}           % if you want to change the width of the column with the dates
+
+% personal data
+\firstname{Alexis}
+\familyname{Chotard}
+\title{\'{E}tudiant à Epita}
+\address{32 Route de Remiremont}{88380 ARCHES}
+\mobile{(+33)6-08-92-41-96}
+\phone{(+33)3-29-32-71-27}
+\email{alexis.horgix.chotard@gmail.com}
+\homepage{www.horgix.fr}
+\quote{"People think that computer science is the art of geniuses but the actual reality is the opposite, just many people doing things that build on each other, like a wall of mini stones." (Donald Knuth)}
+
+
+\begin{document}
+
+\makecvtitle
+
+\section{\'{E}ducation}
+
+\tlcventry{2010}{0}{Epita}{Paris}{}{}
+{\'{E}cole d'Ingénieur en Informatique; Programmation (C, OCaml, C++, ...),
+Algorithmique, Physique, Droit, Architecture des Systèmes, \'{E}lectronique,
+Mathématiques,Construction des Compilateurs, Théorie des Languages, Systèmes
+d'exploitation, Marketing, ... }
+
+\tldatecventry{2012}{Brock University}{St Catharines, Ontario}{Canada}{5 mois}
+{Semestre à l'international; \'{E}conomie, \'{E}lectronique, Mathématiques,
+    Programmation (C), ...}
+
+\tldatecventry{2010}{Baccalauréat S}{Lycée Claude Gelée}{Epina}{Mention assez bien}
+{}
+
+\section{\'{E}xpérience professionnelle}
+
+\tlcventry{2012}{0}{Assistant OCaml/C}{Epita}{Paris}{}
+{Professeur lors de Travaux Pratiques pour des élèves à BAC+2 sur les sujets suivants :
+\begin{itemize}
+    \item{Langage C}
+    \item{Langage Ocaml}
+    \item{Environnement Unix}
+    \item{Organisation de projet}
+\end{itemize}
+}
+
+\tldatecventry{2012}{Développeur-Stagiaire}{Process Engineering}{Arches}{3 mois}
+{Stage "Association C++/C\#" visant à étudier les différentes manières de faire
+    communiquer des processus (IPC) dans ces deux langages au moyen des
+    diverses solutions :
+\begin{itemize}
+    \item{Shared Memory}
+    \item{Sockets}
+    \item{Named Pipes}
+    \item{DLLs}
+\end{itemize}
+}
+
+\section{Compétences}
+
+\section{Langues}
+\cvlanguage{Français}{Natif}{Langue natale}
+\cvlanguage{Anglais}{Courant}{Pratiqué quotidiennement, étudié 8 ans}
+\cvlanguage{Allemand}{Notions}{\'{E}tudié 7 ans, peu pratiqué}
+
+\section{Centres d'interêt}
+
+\cvitem{Vie associative}{\textbf{GConfs} (Trésorier), organisation de conférences}
+\cvitem{}{\textbf{Prologin}, organisation d'un concours d'informatique annuel}
+\cvitem{}{\textbf{AEDD}, association pour le développement durable}
+\cvitem{Sport}{Poweriser, squash, natation, ski}
+\cvitem{Autres}{Lecture, Rubik's cube, nouvelles technologies}
+
+\end{document}
