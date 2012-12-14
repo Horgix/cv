@@ -1,11 +1,31 @@
-all::
-	pdflatex cv.tex
+LASTNAME	= chotard
+FIRSTNAME	= alexis
 
-fr::
-	pdflatex chotard_alexis_cv_fr.tex
+CVFR		= $(LASTNAME)_$(FIRSTNAME)_cv_fr
+CVEN		= $(LASTNAME)_$(FIRSTNAME)_cv_en
+
+PDF		= pdflatex
+VIEW		= evince
+
+all:: fr en
+
+fr: $(CVFR).pdf
+
+en: $(CVEN).pdf
+
+%.pdf: %.tex
+	$(PDF) $<
 
 frdisplay::
-	evince chotard_alexis_cv_fr.pdf
+	$(VIEW) $(CVFR).pdf
+
+endisplay::
+	$(VIEW) $(CVEN).pdf
 
 clean::
-	rm -f *.aux *.log *.out *.pdf
+	rm -f *.aux *.log *.out
+
+distclean:: clean
+	rm -f *.pdf
+
+nuke:: distclean
