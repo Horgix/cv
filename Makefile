@@ -9,9 +9,9 @@ VIEW		= evince
 
 all:: fr en
 
-fr: $(CVFR).pdf
+fr:: $(CVFR).pdf
 
-en: $(CVEN).pdf
+en:: $(CVEN).pdf
 
 %.pdf: %.tex
 	$(PDF) $<
