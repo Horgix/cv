@@ -19,6 +19,12 @@ en:: $(CVEN).pdf
 frdisplay::
 	$(VIEW) $(CVFR).pdf
 
+fredit::
+	${EDITOR} $(CVFR).tex
+
+enedit::
+	${EDITOR} $(CVEN).tex
+
 endisplay::
 	$(VIEW) $(CVEN).pdf
 
