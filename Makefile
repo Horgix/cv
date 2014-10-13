@@ -5,7 +5,7 @@ CVFR		= $(LASTNAME)_$(FIRSTNAME)_cv_fr
 CVEN		= $(LASTNAME)_$(FIRSTNAME)_cv_en
 
 PDF		= pdflatex
-VIEW		= evince
+VIEW		= zathura
 
 all:: fr en
 
