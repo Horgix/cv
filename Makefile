@@ -1,37 +1,36 @@
 LASTNAME	= chotard
 FIRSTNAME	= alexis
 
-CVFR		= $(LASTNAME)_$(FIRSTNAME)_cv_fr
-CVEN		= $(LASTNAME)_$(FIRSTNAME)_cv_en
+export CV	= ${LASTNAME}_${FIRSTNAME}_cv
+export CVFR	= ${CV}_fr
+export CVEN	= ${CV}_en
 
-PDF		= pdflatex
-VIEW		= zathura
+SRCDIR		= ./src
+OUTDIR		= ./output
+VIEWER		= zathura
 
-all:: fr en
+all::
+	make -C ${SRCDIR}
 
-fr:: $(CVFR).pdf
-
-en:: $(CVEN).pdf
-
-%.pdf: %.tex
-	$(PDF) $<
-
-frdisplay::
-	$(VIEW) $(CVFR).pdf
+fr en::
+	mkdir -p ${OUTDIR}
+	make -C ${SRCDIR} $@
+	ln -s ${OUTDIR}/${CV}_$@.pdf .
 
 fredit::
-	${EDITOR} $(CVFR).tex
-
+	${EDITOR} ${SRCDIR}/${CVFR}.tex
 enedit::
-	${EDITOR} $(CVEN).tex
+	${EDITOR} ${SRCDIR}/${CVEN}.tex
 
+frdisplay::
+	${VIEWER} ${CVFR}.pdf
 endisplay::
-	$(VIEW) $(CVEN).pdf
+	${VIEWER} ${CVEN}.pdf
 
 clean::
-	rm -f *.aux *.log *.out
+	rm -f ${OUTDIR}/*.{aux,log,out}
 
 distclean:: clean
-	rm -f *.pdf
+	rm -rf *.pdf ${OUTDIR}
 
 nuke:: distclean
