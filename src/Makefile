@@ -1,5 +1,5 @@
 OUTDIR		= ../output
-PDF		= pdflatex --output-directory ${OUTDIR}
+PDF		= xelatex --output-directory ${OUTDIR}
 
 all:: fr en
 
