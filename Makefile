@@ -3,6 +3,7 @@ FIRSTNAME	= alexis
 
 export CV	= ${LASTNAME}_${FIRSTNAME}_cv
 export CVFR	= ${CV}_fr
+export CVSMILE	= ${CV}_smile
 export CVEN	= ${CV}_en
 
 SRCDIR		= ./src
@@ -12,19 +13,23 @@ VIEWER		= zathura
 all::
 	make -C ${SRCDIR}
 
-fr en::
+fr en smile::
 	mkdir -p ${OUTDIR}
 	make -C ${SRCDIR} $@
-	ln -s ${OUTDIR}/${CV}_$@.pdf .
+	ln -s -f ${OUTDIR}/${CV}_$@.pdf .
 
 fredit::
 	${EDITOR} ${SRCDIR}/${CVFR}.tex
 enedit::
 	${EDITOR} ${SRCDIR}/${CVEN}.tex
+smileedit::
+	${EDITOR} ${SRCDIR}/${CVEN}.tex
 
 frdisplay::
 	${VIEWER} ${CVFR}.pdf
 endisplay::
+	${VIEWER} ${CVEN}.pdf
+smiledisplay::
 	${VIEWER} ${CVEN}.pdf
 
 clean::
