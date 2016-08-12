@@ -6,12 +6,11 @@ export CVFR	= ${CV}_fr
 export CVSMILE	= ${CV}_smile
 export CVEN	= ${CV}_en
 
-SRCDIR		= ./src
-OUTDIR		= ./output
-VIEWER		= zathura
+export SRCDIR	= ${PWD}/src
+export OUTDIR	= ${PWD}/output
+export VIEWER	= zathura
 
-all::
-	make -C ${SRCDIR}
+all:: fr en smile
 
 fr en smile::
 	mkdir -p ${OUTDIR}
