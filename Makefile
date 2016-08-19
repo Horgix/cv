@@ -14,6 +14,7 @@ all:: fr en
 fr en::
 	mkdir -p ${OUTDIR}
 	docker run --rm -v ${SRCDIR}:/var/sources -v ${OUTDIR}:/var/output horgix/latex xelatex --output-directory /var/output ${CV}_$@.tex
+	docker run --rm -v ${OUTDIR}:/var/output busybox chown `id -u`:`id -g` /var/output/ -R
 	ln -s -f ${OUTDIR}/${CV}_$@.pdf .
 
 fredit::
