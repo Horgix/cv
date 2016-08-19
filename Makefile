@@ -13,7 +13,7 @@ all:: fr en
 
 fr en::
 	mkdir -p ${OUTDIR}
-	make -C ${SRCDIR} $@
+	docker run --rm -v ${SRCDIR}:/var/sources -v ${OUTDIR}:/var/output horgix/latex xelatex --output-directory /var/output ${CV}_$@.tex
 	ln -s -f ${OUTDIR}/${CV}_$@.pdf .
 
 fredit::
