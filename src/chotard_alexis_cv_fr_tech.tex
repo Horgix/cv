@@ -1,0 +1,307 @@
+\newcommand\Colorhref[3][color1]{\href{#2}{\color{#1}\underline{#3}}}
+\documentclass[10pt,a4paper]{moderncv}
+
+\usepackage{moderntimeline}
+\usepackage[french]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+%\renewcommand{\FrenchLabelItem}{\textcolor{blue}{$\circ$}}
+
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\tlmaxdates{2009}{2016}
+\tlwidth{0.8ex}
+\tltext{\tiny}
+% adjust the page margins
+\usepackage[scale=0.90]{geometry}
+\setlength{\hintscolumnwidth}{2.5cm}           % if you want to change the width of the column with the dates
+
+% personal data
+\firstname{Alexis}
+\familyname{Chotard}
+\title{Ingénieur Système \& Infrastructure\newline
+DevOps à \Colorhref{http://www.smile.fr/}{Smile Open Source Solutions}}
+\address{1 rue Jean Mermoz}{Appartement 157}{92320 Châtillon}
+\mobile{06-08-92-41-96}
+% \phone{03-29-32-71-27}
+\email{alexis.horgix.chotard@gmail.com}
+\homepage{https://github.com/horgix}
+\extrainfo{23 ans - Permis B}
+\photo[60pt][0.2pt]{photo_cv}
+\quote{"People think that computer science is the art of geniuses but the
+actual reality is the opposite, just many people doing things that build on
+each other, like a wall of mini stones." -- Donald Knuth}
+
+\begin{document}
+
+\makecvtitle
+
+\section{Expérience}
+
+\subsection{Professionnelle}
+
+\tlcventry{2015}{0}{Ingénieur Système et Infrastructure / DevOps}{Smile Open
+Source Solutions}{Paris}{}
+{Au sein de Smile en tant qu'Ingénieur Système et Infrastructure, j'ai eu
+l'opportunité d'effectuer de nombreuses missions sur des technologies très
+variées tout en restant dans un contexte Open Source me plaisant
+particulièrement, notamment de par la possibilité de contribuer aux solutions
+utilisées.\newline
+Mes principales  expériences  se  regroupent  autour  de
+l'industrialisation/automatisation (\textbf{Ansible}, \textbf{SaltStack}), de
+la virtualisation/containerisation (\textbf{Docker}, LXC, Proxmox, OpenVZ),
+ainsi que de l'accompagnement à la mise en place d'architectures web.
+  \begin{itemize}
+    \item Nombreuses missions courtes de quelques jours, par exemple :
+      \begin{itemize}
+        \item Automatisation via Ansible du déploiement de serveurs Magento
+          (frontaux + bases de données) avec environnements de développement,
+          d'intégration et de production
+        \item Tests de montée en charge (JMeter)
+        \item Formations : scripting shell, Ansible, git, administration
+          système basique, etc
+        \item Mise en place d'un Owncloud en haute disponibilité : Corosync,
+          Pacemaker, HAProxy, csync2, DRBD
+        \item Gestion d'un projet de générateur de plateformes de démonstration
+          : chiffrage, plan de déroulement, etc. Ansible, Tower, AWS
+        \item Automatisation de déploiement JBoss et Oracle
+      \end{itemize}
+    \item Entretiens techniques de candidats, intégration et formation des
+      nouveaux arrivants et coaching de stagiaires
+    \item Organisation de lightning talks hebdomadaires : UEFI, grsecurity,
+      FreeIPA, Syncthing, Ansible, etc
+    \item Projets internes de sécurité pour référencement : automatisation du
+      chiffrement de postes utilisateurs, étude de chiffrements des emails, et
+      authentification forte
+    \item Vulgarisation technique : présentation "devops for sales(wo)men",
+      enjeux et bénéfices de l'industrialiation et l'infrastructure as code,
+      etc
+    \item Rédaction de laïus commerciaux, par exemple sur
+      \Colorhref{http://infrastructure.smile.eu/Notre-offre/Nos-expertises/Devops-industrialisation}{l'industrialisation
+      logicielle}
+    \item Avant vente, qualification, études, mise en place de plateformes
+      de démonstration
+  \end{itemize}
+}
+
+\tldatecventry{2016}{Prestataire Système/Architecture/DevOps}{OFI pour le
+compte de Smile}{Paris}{5 mois}
+{
+  \begin{itemize}
+    \item Formation git, Ansible et Linux
+    \item Industrialiasation via Ansible
+      \begin{itemize}
+        \item Inventaire dynamique avec comme source Active Directory
+        \item Automatisation du déploiement de machines sur VMWare
+        \item Provisionnement de base des machines : monitoring (Zabbix),
+          logging centralisé (Splunk), authentification (SSSD), configuration
+          système, etc.
+        \item Spécialisation : front, bases de données, etc
+        \item Déploiement applicatif par environnement (développement,
+          intégration, production)
+        \item Rôles génériques
+      \end{itemize}
+    \item Intégration Continue / Déploiement Continu
+      \begin{itemize}
+        \item Migration de gitolite à Gitlab
+        \item Intégration avec Jira
+        \item Débuts d'intégration continue via Teamcity et Artifactory
+        \item Déploiement continu via Ansible
+      \end{itemize}
+    \item DevOps
+      \begin{itemize}
+        \item Rapprochement des développeurs internes et des équipes de
+          production
+        \item Assistance aux développeurs afin de rendre les applications
+          déployables automatiquement, proprement, et de manière intégrée au SI
+        \item "\'{E}vangelisation", bonnes pratiques, documentation
+          (Confluence), etc
+      \end{itemize}
+  \end{itemize}
+}
+
+\tldatecventry{2016}{Prestataire Système/DevOps}{AFNOR pour le compte de
+Smile}{Paris}{1 semaine}
+{
+  \begin{itemize}
+    \item Formation git et Ansible
+    \item Industrialisation via Ansible :
+      \begin{itemize}
+        \item Développement d'un inventaire dynamique via le DNS : deléguation
+          de zone + request AXFR
+        \item Automatisation de la création de machines sur VMWare
+        \item Création de rôles de services selon des prérequis donnés
+        \item Automatisation du déploiement de Wordpress
+      \end{itemize}
+  \end{itemize}
+}
+
+\tldatecventry{2016}{Prestataire Système}{CCFD pour le compte de
+Smile}{Paris}{2 semaine}
+{
+  \begin{itemize}
+    \item Ansible : création d'un inventaire dynamique s'appuyant sur Proxmox
+      (catégorisation par pool, état, remontée d'infos, etc.) et de rôles
+      basiques
+    \item Remise à plat de l'infrastructure sous-jacente : ntp, dns, pfsense,
+      etc
+    \item Ceph : remise en état de marche d'un cluster existant (monitors
+      desynchronisés, OSDs downs, pools inutilisés, placement des PGs non
+      optimal, ...) + benchmark
+    \item Reconfiguration de hosts Proxmox : corosync, cluster pve
+    \item Visioconférence via JitsiMeet, génération et signature d'addons
+      Firefox/Chrome
+  \end{itemize}
+}
+
+\tldatecventry{2016}{Prestataire Système}{Expertise France pour le compte de
+Smile}{Paris}{3 mois}
+{
+  \begin{itemize}
+    \item Automatisation de la configuration des serveurs via Ansible
+    \item Formation git et Ansible
+    \item Migration de plateforme mail (Sogo vers Bluemind)
+    \item Mise en place de visioconférence via JitsiMeet (Prosody + Jitsi
+      videobridge + jicofo)
+    \item Développement d'un webservice de génération d'invitations et d'accès
+      pour la visioconférence : backend en python, frontend responsive,
+      génération d'emails à partir de templates Jinja2
+    \item Mise en place d'un cluster Ceph (Infernalis) : installation des
+      serveurs, configuration, tuning de la crushmap, des règles de placement,
+      des pools, et benchmark
+    \item Mise en place de SSO via CAS (Kerberos + fallback LDAP)
+  \end{itemize}
+}
+
+\tldatecventry{2016}{Prestataire Système}{Groupe Alpha pour le compte de
+Smile}{Paris}{2 semaines}
+{
+  \begin{itemize}
+    \item Homogénéisation et centralisation des logs : ElasticSearch / Logstash
+      / Kibana
+    \item Authentification Kerberos via SSSD
+    \item Automatisation du déploiement des configurations via Ansible
+  \end{itemize}
+}
+
+\tldatecventry{2015}{Stagiaire Ingénieur Système et Infrastructure}{Smile Open
+Source Solutions}{Paris}{6 mois}
+{Stage de fin d'études avec pour sujet "Déploiement et gestion de postes de
+travail Open Source", couvrant l'automatisation du déploiement de postes via
+PXE et leur gestion (inventaire, contrôle à distance, gestion de configuration,
+etc).
+\begin{itemize}
+  \item \'{E}tude initiale sur Pulse2 (développé par Mandriva) s'étant soldée
+    de manière non convaincante et par 25 pages de bug report 3 mois avant le
+    dépôt de bilan de Mandriva
+  \item \'{E}tudes succinte et comparaison de Katello, Foreman, Cobbler, FOG,
+    OpenQRM, FAI, CFEngine, Ansible, Rudder, Puppet, Chef, SaltStack, etc.
+  \item Solution retenue, maquettée et validée : \textbf{Cobbler + SaltStack}
+\end{itemize}
+\'{E}galement en charge de :
+\begin{itemize}
+  \item Support interne : OpenVZ, git, SVN, intégration, automatisation, debug
+    système, etc
+  \item Support clients : infrastructures mail, haute disponibilité, etc
+\end{itemize}
+}
+
+\tlcventry{2012}{2015}{Assistant C, Unix, Ocaml, C++ et Java}{Epita}{Paris}{3
+ans}
+{Membre de l'équipe chargée de l'enseignement de l'informatique pratique à des
+élèves de BAC+2 à BAC+3, incluant cours, travaux pratiques, ainsi que création
+de sujets de projets et d'examens.}
+
+\tlcventry{2013}{2014}{Stagiaire R\&D}{Dassault Systèmes}{Vélizy}{5 mois}
+{Stage "Développement d'un connecteur ENOVIA VPM V5" visant à réécrire une
+partie du serveur en C++ afin d'améliorer les performances du traitement des
+requêtes ainsi que leur compatibilité avec les versions plus récentes.}
+
+\tldatecventry{2012}{Stagiaire développeur}{Process Engineering}{Arches}{3 mois}
+{Stage "Associativité C++/C\#" ayant pour but d'étudier et de comparer les
+différentes manières de faire communiquer des processus (IPC) dans ces deux
+langages.}
+
+\bigskip
+\subsection{Personnelle}
+
+\tlcventry{2015}{0}{Contributions Open Source}{}{}{}
+{
+  \begin{itemize}
+    %\item \Colorhref{https://github.com/Horgix?tab=repositories}{Github}
+    %\item \Colorhref{https://www.openhub.net/accounts/Horgix/positions}{OpenHub}
+    \item Core contributeur de Py3status
+    \item Code : saltstack, zabbix, radicale
+    \item Documentation : git-scm.com, CAS, wallabag, kodokojo
+    \item Mainteneur de paquets sur l'\Colorhref{https://aur.archlinux.org}{AUR} :
+      \Colorhref{https://aur.archlinux.org/packages/py3status/}{py3status},
+      \Colorhref{https://aur.archlinux.org/packages/py3status-git/}{py3status-git},
+      \Colorhref{https://aur.archlinux.org/packages/python2-mygpoclient/}{python2-mygpoclient}
+  \end{itemize}
+}
+
+\tlcventry{2012}{0}{horgix.fr}{Administration de 3 serveurs dédiés personnels
+servant de "playing ground"}{}{}
+{\begin{itemize}
+  \item Containerisation : Docker, LXC
+  \item Intégration Continue : Gitlab, Gitlab CI
+  \item Orchestration : Mesos, Marathon
+  \item Industrialisation : SaltStack
+  \item Services personnels : Radicale, Agendav, Syncthing, Wallabag, horgix.fr
+\end{itemize}
+}
+
+\subsection{Scolaire}
+
+\tlcventry{2012}{2014}{Tiger Compiler}{Développement d'un compilateur intégral
+en C++ pour le langage Tiger}{6 mois}{4 personnes}{}
+
+\tldatecventry{2012}{42sh}{Un interpréteur de commandes (shell) POSIX-compliant
+en C}{1 mois}{5 personnes}{}
+
+\tlcventry{2010}{2011}{VorTeX}{Un jeu vidéo Portal-like en C\# utilisant
+DirectX}{6 mois}{3 personnes}{}
+
+\section{Formation}
+
+\tlcventry{2010}{2015}{\'{E}cole d'Ingénieurs en Informatique}{EPITA}{Paris}{}{}
+
+\tlcventry{2013}{2015}{Spécialisation SRS : Sécurité, Réseau et
+Système}{EPITA}{Paris}{}{}
+
+\tldatecventry{2012}{Semestre à l'international}{Brock University}{St
+Catharines (Ontario), Canada}{5 mois}{}
+
+\tldatecventry{2010}{Baccalauréat S}{Lycée Claude Gelée}{\'{E}pinal}{avec
+mention} {}
+
+\section{Compétences}
+
+\cvitem{Développement}{\textbf{Python}, \textbf{C++}, \textbf{C}, C\#, Java,
+OCaml, Shell Scripting; notions de \textbf{Haskell} et \textbf{Go}; attirance
+pour le Rust}{}{}
+\cvitem{Industrialisation, Intégration}{\textbf{Ansible},
+\textbf{SaltStack}}{}{}
+\cvitem{Containerisation, orchestration}{Docker, LXC, Mesos, Marathon}{}{}
+\cvitem{Système}{GNU/Linux (Archlinux, CentOS, Debian, ...), OpenStack,
+Ceph}{}{}
+\cvitem{Infrastructure}{Conception système, haute disponibilité, systèmes
+distribués}{}{}
+\cvitem{Divers}{Versionnement, intégration continue, monitoring, etc}{}{}
+
+\section{Langues}
+
+\cvlanguage{Anglais}{Courant}{Pratiqué quotidiennement, étudié 8 ans; TOEIC 920}
+\cvlanguage{Allemand}{Notions}{\'{E}tudié 7 ans, peu pratiqué}
+
+\section{Centres d'interêt}
+
+\cvitem{Vie associative}{\textbf{\Colorhref{https://gconfs.fr/}{GConfs}}
+(Président), organisation de conférences techniques}
+\cvitem{}{\textbf{\Colorhref{https://prologin.org/}{Prologin}}, organisation d'un
+concours d'informatique annuel}
+\cvitem{Sport}{Poweriser, squash, natation, ski}
+\cvitem{Autres}{Lecture, Meetups, Rubik's cube, nouvelles technologies}
+
+\end{document}
