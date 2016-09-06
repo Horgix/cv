@@ -9,9 +9,9 @@ export SRCDIR	= ${PWD}/src
 export OUTDIR	= ${PWD}/output
 export VIEWER	= zathura
 
-all:: fr en
+all:: fr en fr_tech
 
-fr en::
+fr en fr_tech::
 	mkdir -p ${OUTDIR}
 	docker run --rm -v ${SRCDIR}:/var/sources -v ${OUTDIR}:/var/output horgix/moderntimeline:latest xelatex --output-directory /var/output ${CV}_$@.tex
 	docker run --rm -v ${OUTDIR}:/var/output busybox chown `id -u`:`id -g` /var/output/ -R
