@@ -1,3 +1,4 @@
+\newcommand\Colorhref[3][color1]{\href{#2}{\color{#1}\underline{#3}}}
 \documentclass[10pt,a4paper]{moderncv}
 
 \usepackage{moderntimeline}
@@ -9,7 +10,7 @@
 
 \moderncvstyle{classic}
 \moderncvcolor{blue}
-\tlmaxdates{2009}{2014}
+\tlmaxdates{2010}{2016}
 \tlwidth{0.8ex}
 \tltext{\tiny}
 % adjust the page margins
@@ -19,89 +20,136 @@
 % personal data
 \firstname{Alexis}
 \familyname{Chotard}
-\title{\'{E}tudiant à Epita en 3\up{ème} année\newline
-de cycle Ingénieur\newline
-\textit{\Large Recherche un stage de fin d'études de\newline
-6 mois à partir de Février 2015}}
-\address{32 Route de Remiremont}{88380 ARCHES}
+\title{Ingénieur Système \& Infrastructure\newline
+DevOps à Smile Open Source Solutions}
+\address{1 rue Jean Mermoz}{Appartement 157}{92320 Châtillon}
 \mobile{06-08-92-41-96}
-\phone{03-29-32-71-27}
+% \phone{03-29-32-71-27}
 \email{alexis.horgix.chotard@gmail.com}
-\homepage{www.horgix.fr}
-\extrainfo{20 ans - Permis B}
+\homepage{https://github.com/horgix}
+\extrainfo{23 ans - Permis B}
 \photo[60pt][0.2pt]{photo_cv}
 \quote{"People think that computer science is the art of geniuses but the
 actual reality is the opposite, just many people doing things that build on
 each other, like a wall of mini stones." -- Donald Knuth}
 
-
 \begin{document}
 
 \makecvtitle
-
-\section{Formation}
-
-\tlcventry{2013}{0}{Spécialisation SRS : Sécurité, Réseau et
-Système}{EPITA}{Paris}{}{}
-
-\tldatecventry{2012}{Semestre à l'international}{Brock University}{St
-Catharines (Ontario), Canada}{5 mois}{}
-
-\tlcventry{2010}{0}{\'{E}cole d'Ingénieurs en Informatique}{EPITA}{Paris}{}{}
-
-\tldatecventry{2010}{Baccalauréat S}{Lycée Claude Gelée}{\'{E}pinal}{avec
-mention} {}
 
 \section{Expérience}
 
 \subsection{Professionnelle}
 
-\tlcventry{2012}{0}{Assistant C, Unix, Ocaml, C++ et Java}{Epita}{Paris}{}
+\tlcventry{2015}{0}{Ingénieur Système et Infrastructure / DevOps}{Smile Open
+Source Solutions}{Paris}{}
+{
+  \begin{itemize}
+    \item Industrialisation : \textbf{Ansible}, \textbf{SaltStack}
+    \item Conception d'architectures virtualisées : \textbf{Docker}, LXC,
+      Proxmox, OpenVZ
+    \item Mise en place d'architectures web hautement disponibles
+    \item Génération de plateformes de démonstration via Ansible, Tower et AWS
+    \item Tests de montée en charge via JMeter
+    \item Formations : scripting shell, Ansible, git, administration système
+      basique, etc
+    \item Projets internes de sécurité pour référencement : automatisation du
+      chiffrement de postes utilisateurs, étude de chiffrements des emails et
+      authentification forte
+  \end{itemize}
+}
+
+\tldatecventry{2015}{Prestataire Système/Architecture/DevOps}{OFI pour le
+compte de Smile}{Paris}{5 mois}
+{
+  \begin{itemize}
+    \item Formation git, Ansible et Linux
+    \item Industrialiasation via Ansible : inventaire dynamique basé sur Active
+      Directory, création de machine sur VMWare, provisionnement d'un socle de
+      base, spécialisation selon le rôle de la machine, déploiement applicatif
+    \item Intégration Continue et Déploiement Continu : Gitlab, Teamcity,
+      Artifactory, déploiement par Ansible
+    \item DevOps : rapprochement des développeurs internes et des équipes de
+      production, assistance aux développeurs à l'intégration de leurs
+      applications au SI
+  \end{itemize}
+}
+
+\tldatecventry{2015}{Stagiaire Ingénieur Système et Infrastructure}{Smile Open
+Source Solutions}{Paris}{6 mois}
+{Stage de fin d'études avec pour sujet "Déploiement et gestion de postes de
+travail Open Source", couvrant l'automatisation du déploiement de postes via
+PXE (Cobbler) et leur gestion via SaltStack. \'{E}galement en charge du support
+technique interne (OpenVZ, git, intégration, automatisation) ainsi que du
+support clients (infrastructures mail, haute disponibilité, etc)}
+
+\tlcventry{2012}{2015}{Assistant C, Unix, Ocaml, C++ et Java}{Epita}{Paris}{3
+ans}
 {Membre de l'équipe chargée de l'enseignement de l'informatique pratique à des
 élèves de BAC+2 à BAC+3, incluant cours, travaux pratiques, ainsi que création
 de sujets de projets et d'examens.}
 
 \tlcventry{2013}{2014}{Stagiaire R\&D}{Dassault Systèmes}{Vélizy}{5 mois}
 {Stage "Développement d'un connecteur ENOVIA VPM V5" visant à réécrire une
-partie du serveur afin d'améliorer les performances du traitement des requêtes
-ainsi que leur compatibilité avec les versions plus récentes.}
+partie du serveur en C++ afin d'améliorer les performances du traitement des
+requêtes ainsi que leur compatibilité avec les versions plus récentes.}
 
-\tldatecventry{2012}{Développeur-Stagiaire}{Process Engineering}{Arches}{3 mois}
-{Stage "Associativité C++/C\#" ayant pour but d'étudier et de comparer les
-différentes manières de faire communiquer des processus (IPC) dans ces deux
-langages.}
-
-\subsection{Scolaire}
-
-\tlcventry{2012}{2014}{Tiger Compiler}{Développement d'un compilateur intégral en
-C++ pour le langage Tiger}{6 mois}{4 personnes}{}
-
-\tldatecventry{2012}{42sh}{Un interpréteur de commande (shell) POSIX-compliant
-en C}{1 mois}{5 personnes}{}
-
-\tlcventry{2010}{2011}{VorTeX}{Un jeu vidéo Portal-like en C\# utilisant
-DirectX}{6 mois}{3 personnes}{}
-
+\bigskip
 \subsection{Personnelle}
 
-\tlcventry{2012}{0}{My server}{Administration d'un serveur dédié personnel,
-ayant pour but d'acquérir la certification IPv6 d'Hurricane Electric}{}{}{}
+\tlcventry{2015}{0}{Contributions Open Source}{}{}{}
+{
+  \begin{itemize}
+    \item Core contributeur de Py3status
+    \item Code : SaltStack, Zabbix, Radicale
+    \item Documentation : git-scm.com, CAS, Wallabag, KodoKojo
+    \item Mainteneur de paquets sur l'AUR : py3status, py3status-git,
+      python2-mygpoclient
+  \end{itemize}
+}
+
+\tlcventry{2012}{0}{horgix.fr}{Administration de 3 serveurs dédiés personnels
+servant de "playing ground"}{}{}
+{Basé sur Docker, LXC, Gitlab CI, Mesos, Marathon, Saltstack, et hébergeant des
+services personnels tels que radicale, agendav, syncthing, wallabag.}
+
+\section{Formation}
+
+\tlcventry{2010}{2015}{\'{E}cole d'Ingénieurs en Informatique}{EPITA}{Paris}{}{}
+
+\tlcventry{2013}{2015}{Spécialisation SRS : Sécurité, Réseau et
+Système}{EPITA}{Paris}{}{}
+
+\tldatecventry{2012}{Semestre à l'international}{Brock University}{St
+Catharines (Ontario), Canada}{5 mois}{}
 
 \section{Compétences}
 
-\cvitem{Langages}{C++, C, C\#, Python, Java, OCaml, Shell Scripting; notions de
-Haskell et Ruby}{}{}
-\cvitem{Divers}{Environnement Unix, \LaTeX, Versionnement (Git, Mercurial, SVN)}{}{}
+\cvitem{Développement}{\textbf{Python}, \textbf{C++}, \textbf{C}, C\#, Java,
+OCaml, Shell Scripting; notions de \textbf{Haskell} et \textbf{Go}; attirance
+pour le Rust}{}{}
+\cvitem{Automatisation}{\textbf{Ansible},
+\textbf{SaltStack}, concepts de l'Infrastructure as Code}{}{}
+\cvitem{Containerisation}{\textbf{Docker}, LXC, OpenVZ}{}{}
+\cvitem{Orchestration}{Mesos, Marathon}{}{}
+\cvitem{Système}{\textbf{GNU/Linux} (Archlinux, CentOS, Debian, ...),
+OpenStack, Ceph}{}{}
+\cvitem{Infrastructure}{Conception système, systèmes distribués, haute
+disponibilité (Corosync, Pacemaker, HAProxy, DRBD), infrastructure web (Apache,
+Nginx, MariaDB, Varnish, \textbf{Traefik})}{}{}
+\cvitem{Divers}{Versionnement, intégration continue, monitoring}{}{}
 
 \section{Langues}
+
 \cvlanguage{Anglais}{Courant}{Pratiqué quotidiennement, étudié 8 ans; TOEIC 920}
 \cvlanguage{Allemand}{Notions}{\'{E}tudié 7 ans, peu pratiqué}
 
 \section{Centres d'interêt}
 
-\cvitem{Vie associative}{\textbf{GConfs} (Vice-Secrétaire), organisation de conférences}
+\cvitem{Vie associative}{\textbf{GConfs} (Président), organisation de
+conférences techniques}
 \cvitem{}{\textbf{Prologin}, organisation d'un concours d'informatique annuel}
 \cvitem{Sport}{Poweriser, squash, natation, ski}
-\cvitem{Autres}{Lecture, Rubik's cube, nouvelles technologies}
+\cvitem{Autres}{Lecture, Meetups, Rubik's cube, nouvelles technologies}
 
 \end{document}
